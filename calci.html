@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+      button{
+        width:30px;
+        margin-left:7px;
+        background-color: aqua;
+      }
+      input{
+        border-radius: 10px;
+        height:30px;
+      }
+      fieldset{
+        width: 100px;
+        margin-top: 300px;
+        margin-left: 700px;
+        background-color: azure;
+        border-radius: 10px;
+      }
+    </style>
+</head>
+<body>
+  <div>
+   <fieldset>
+    <input type="number" id="n" placeholder="enter 1 no..."><br><br>
+    <input type="number" id="m" placeholder="enter 2 no..."><br><br>
+    <button id="b" onclick="ft()">+</button>
+    <button id="b" onclick="st()">-</button>
+    <button id="b" onclick="tt()">*</button>
+    <button id="b" onclick="fft()">/</button><br><br>
+    <p id="o" style="text-align: center;"></p>
+    </fieldset>
+    </div>
+    <script>
+      function ft(){
+            var f=document.getElementById("n").value;
+            var s=document.getElementById("m").value;
+            sum=Number(f)+Number(s);
+           o.innerHTML=sum;
+      }
+      function st(){
+            var f=document.getElementById("n").value;
+            var s=document.getElementById("m").value;
+            dif=f-s;
+           o.innerHTML=dif;
+      }
+      function tt(){
+            var f=document.getElementById("n").value;
+            var s=document.getElementById("m").value;
+            mul=f*s;
+           o.innerHTML=mul;
+      }
+      function fft(){
+            var f=document.getElementById("n").value;
+            var s=document.getElementById("m").value;
+            div=f/s;
+            o.innerHTML=div;
+      }
+    </script>
+</body>
+</html>
